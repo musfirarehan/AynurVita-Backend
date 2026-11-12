@@ -101,7 +101,7 @@ def generate_medicine_counseling(medicines):
             )
 
         prompt = f"""
-You are PharmaAssist AI, a professional pharmacist assistant.
+You are AYNUR VITA, a professional pharmacist assistant.
 
 Your job is to explain prescription medicines to patients using ONLY the provided medicine knowledge.
 

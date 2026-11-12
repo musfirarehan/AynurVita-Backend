@@ -32,6 +32,9 @@ def _get_client():
 
 def preprocess_image(image_path: str):
     img = Image.open(image_path)
+    if img.width < 1600:
+        scale = 1600 / img.width
+        img = img.resize((1600, round(img.height * scale)))
     img = img.convert("L")
     img = ImageEnhance.Contrast(img).enhance(2.0)
     img = img.filter(ImageFilter.SHARPEN)
@@ -52,6 +55,15 @@ def clean_json_response(text: str):
     return text.strip()
 
 
+def _remove_blank_medicines(payload):
+    payload["medicines"] = [
+        medicine
+        for medicine in payload.get("medicines", [])
+        if medicine.get("name", "").strip()
+    ]
+    return payload
+
+
 def extract_prescription_text(image_path: str):
     processed_image = None
 
@@ -59,8 +71,13 @@ def extract_prescription_text(image_path: str):
         client = _get_client()
         processed_image = preprocess_image(image_path)
 
+        with Image.open(image_path) as source_image:
+            source_mime_type = Image.MIME.get(source_image.format, "image/jpeg")
+
+        with open(image_path, "rb") as image_file:
+            original_image_bytes = image_file.read()
         with open(processed_image, "rb") as image_file:
-            image_bytes = image_file.read()
+            enhanced_image_bytes = image_file.read()
 
         response = client.models.generate_content(
             model=os.getenv("GEMINI_OCR_MODEL", "gemini-3.5-flash-lite"),
@@ -81,9 +98,9 @@ Rules:
 3. Never diagnose diseases.
 4. Never provide treatment advice.
 5. If handwriting is unclear:
-   - Leave the medicine name empty.
-   - Set confidence below 70.
-   - Suggest possible_names only if you genuinely see possible alternatives.
+    - Do not add a medicine object unless at least part of its name is readable.
+    - Set confidence below 70 when the name is only partially readable.
+    - Suggest possible_names only if you genuinely see possible alternatives.
 6. Preserve the exact spelling if readable.
 7. Convert frequencies:
    OD -> Once Daily
@@ -117,8 +134,17 @@ Return this structure exactly:
                         },
                         {
                             "inline_data": {
+                                "mime_type": source_mime_type,
+                                "data": original_image_bytes,
+                            }
+                        },
+                        {
+                            "text": "The next image is an enhanced high-contrast copy. Use it to clarify faint text, but prefer the original image when the enhancement changes letter shapes.",
+                        },
+                        {
+                            "inline_data": {
                                 "mime_type": "image/jpeg",
-                                "data": image_bytes,
+                                "data": enhanced_image_bytes,
                             }
                         },
                     ],
@@ -131,7 +157,7 @@ Return this structure exactly:
         try:
             payload = json.loads(result)
             parsed = OCRPrescriptionResult.model_validate(payload)
-            return parsed.model_dump()
+            return _remove_blank_medicines(parsed.model_dump())
         except json.JSONDecodeError:
             return {
                 "success": False,
