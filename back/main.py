@@ -11,23 +11,18 @@ load_dotenv()
 
 allowed_origins = os.getenv(
     "ALLOWED_ORIGINS",
-    "http://localhost:3000,http://127.0.0.1:3000,http://localhost:3001,http://127.0.0.1:3001,https://pharmaassist-ai.vercel.app",
+    "*,https://aynur-vita.vercel.app,http://localhost:3000",
 ).split(",")
-allowed_origin_regex = os.getenv(
-    "ALLOWED_ORIGIN_REGEX",
-    r"https://[a-zA-Z0-9-]+\.vercel\.app",
-)
 
 app = FastAPI(
-    title="PharmaAssist AI Backend",
+    title="AYNUR VITA Backend",
     version="1.0.0",
 )
 
 app.add_middleware(
     CORSMiddleware,
     allow_origins=[origin.strip() for origin in allowed_origins if origin.strip()],
-    allow_origin_regex=allowed_origin_regex,
-    allow_credentials=True,
+    allow_credentials=False,
     allow_methods=["*"],
     allow_headers=["*"],
 )
@@ -44,7 +39,7 @@ app.include_router(knowledge.router, prefix="/api/v1")
 @app.get("/")
 def home():
     return {
-        "message": "PharmaAssist AI Backend Running",
+        "message": "AYNUR VITA Backend Running",
         "status": "healthy",
     }
 
@@ -62,9 +57,9 @@ async def startup_event():
             "Warning: missing environment variables for AI services: "
             + ", ".join(missing)
         )
-    print("🚀 PharmaAssist AI Backend Started")
+    print("🚀 AYNUR VITA Backend Started")
 
 
 @app.on_event("shutdown")
 async def shutdown_event():
-    print("🛑 PharmaAssist AI Backend Stopped")
+    print("🛑 AYNUR VITA Backend Stopped")

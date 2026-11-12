@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="https://www.accessdata.fda.gov/spl/stylesheet/spl.xsl" type="text/xsl"?>
+<document xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:hl7-org:v3" xsi:schemaLocation="urn:hl7-org:v3 https://www.accessdata.fda.gov/spl/schema/spl.xsd">
+   <id root="596987e4-4206-b911-e063-6294a90aa570"/>
+   <code code="34390-5" codeSystem="2.16.840.1.113883.6.1" displayName="HUMAN OTC DRUG LABEL"/>
+   <title>A&amp;D/E Ointment </title>
+   <effectiveTime value="20260819"/>
+   <setId root="596987e4-4205-b911-e063-6294a90aa570"/>
+   <versionNumber value="1"/>
+   <author>
+      <time/>
+      <assignedEntity>
+         <representedOrganization>
+            <id root="1.3.6.1.4.1.519.1" extension="170967876"/>
+            <name>Gentell LLC</name>
+            <assignedEntity>
+               <assignedOrganization>
+                  <assignedEntity>
+                     <assignedOrganization>
+                        <id root="1.3.6.1.4.1.519.1" extension="170967876"/>
+                        <name>Gentell LLC</name>
+                     </assignedOrganization>
+                     <performance>
+                        <actDefinition>
+                           <code code="C43360" displayName="manufacture" codeSystem="2.16.840.1.113883.3.26.1.1"/>
+                           <product>
+                              <manufacturedProduct classCode="MANU">
+                                 <manufacturedMaterialKind>
+                                    <code code="61554-304" codeSystem="2.16.840.1.113883.6.69"/>
+                                 </manufacturedMaterialKind>
+                              </manufacturedProduct>
+                           </product>
+                        </actDefinition>
+                     </performance>
+                  </assignedEntity>
+               </assignedOrganization>
+            </assignedEntity>
+         </representedOrganization>
+      </assignedEntity>
+   </author>
+   <component>
+      <structuredBody>
+         <component>
+            <section>
+               <id root="596bbd8e-3579-1fb6-e063-6294a90a3fa2"/>
+               <code code="48780-1" codeSystem="2.16.840.1.113883.6.1" displayName="SPL product data elements section"/>
+               <effectiveTime value="20260819"/>
+               <subject>
+                  <manufacturedProduct>
+                     <manufacturedProduct>
+                        <code code="61554-304" codeSystem="2.16.840.1.113883.6.69"/>
+                        <name>ClaraVie</name>
+                        <formCode code="C42966" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="OINTMENT"/>
+                        <asEntityWithGeneric>
+                           <genericMedicine>
+                              <name>Petrolatum</name>
+                           </genericMedicine>
+                        </asEntityWithGeneric>
+                        <ingredient classCode="ACTIB">
+                           <quantity>
+                              <numerator unit="g" value="0.934"/>
+                              <denominator unit="g" value="1"/>
+                           </quantity>
+                           <ingredientSubstance>
+                              <code code="B6E5W8RQJ4" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>WHITE PETROLATUM</name>
+                              <activeMoiety>
+                                 <activeMoiety>
+                                    <code code="B6E5W8RQJ4" codeSystem="2.16.840.1.113883.4.9"/>
+                                    <name>WHITE PETROLATUM</name>
+                                 </activeMoiety>
+                              </activeMoiety>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="N6K5787QVP" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>LIGHT MINERAL OIL</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="7EV65EAW6H" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>LANOLIN</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="I9O0E3H2ZE" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>PARAFFIN</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="81G40H8B0T" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>VITAMIN A</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="9VU1KI44GP" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>VITAMIN D</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="H4N855PNZ1" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>.ALPHA.-TOCOPHEROL</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="L4SQI4K87S" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>SOLVENT YELLOW 18</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <asContent>
+                           <quantity>
+                              <numerator value="5" unit="g"/>
+                              <denominator value="1"/>
+                           </quantity>
+                           <containerPackagedProduct>
+                              <code code="61554-304-21" codeSystem="2.16.840.1.113883.6.69"/>
+                              <formCode code="C43199" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="PACKET"/>
+                           </containerPackagedProduct>
+                           <subjectOf>
+                              <characteristic>
+                                 <code code="SPLCMBPRDTP" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                                 <value code="C112160" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="Type 0: Not a Combination Product" xsi:type="CV"/>
+                              </characteristic>
+                           </subjectOf>
+                           <subjectOf>
+                              <marketingAct>
+                                 <code code="C53292" codeSystem="2.16.840.1.113883.3.26.1.1"/>
+                                 <statusCode code="active"/>
+                                 <effectiveTime>
+                                    <low value="20260801"/>
+                                 </effectiveTime>
+                              </marketingAct>
+                           </subjectOf>
+                        </asContent>
+                     </manufacturedProduct>
+                     <subjectOf>
+                        <approval>
+                           <id extension="M016" root="2.16.840.1.113883.3.9421"/>
+                           <code code="C200263" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="OTC Monograph Drug"/>
+                           <author>
+                              <territorialAuthority>
+                                 <territory>
+                                    <code code="USA" codeSystem="2.16.840.1.113883.5.28"/>
+                                 </territory>
+                              </territorialAuthority>
+                           </author>
+                        </approval>
+                     </subjectOf>
+                     <subjectOf>
+                        <marketingAct>
+                           <code code="C53292" codeSystem="2.16.840.1.113883.3.26.1.1"/>
+                           <statusCode code="active"/>
+                           <effectiveTime>
+                              <low value="20260801"/>
+                           </effectiveTime>
+                        </marketingAct>
+                     </subjectOf>
+                     <consumedIn>
+                        <substanceAdministration>
+                           <routeCode code="C38304" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="TOPICAL"/>
+                        </substanceAdministration>
+                     </consumedIn>
+                  </manufacturedProduct>
+               </subject>
+            </section>
+         </component>
+         <component>
+            <section ID="id_link_596a07bb-57cd-fba5-e063-6394a90aa014">
+               <id root="596a07bb-57cc-fba5-e063-6394a90aa014"/>
+               <code code="55106-9" codeSystem="2.16.840.1.113883.6.1" displayName="OTC - ACTIVE INGREDIENT SECTION"/>
+               <text>
+                  <paragraph>White Petrolatum USP (93.4% w/w) </paragraph>
+               </text>
+               <effectiveTime value="20260801"/>
+            </section>
+         </component>
+         <component>
+            <section ID="id_link_596a0976-bd5b-5436-e063-6294a90a678b">
+               <id root="596a0976-bd5a-5436-e063-6294a90a678b"/>
+               <code code="55105-1" codeSystem="2.16.840.1.113883.6.1" displayName="OTC - PURPOSE SECTION"/>
+               <text>
+                  <paragraph>Skin Protectant </paragraph>
+               </text>
+               <effectiveTime value="20260801"/>
+            </section>
+         </component>
+         <component>
+            <section ID="id_link_596a1531-1725-61dc-e063-6294a90ab129">
+               <id root="596a1531-1724-61dc-e063-6294a90ab129"/>
+               <code code="50565-1" codeSystem="2.16.840.1.113883.6.1" displayName="OTC - KEEP OUT OF REACH OF CHILDREN SECTION"/>
+               <text>
+                  <paragraph>In case of accidental ingestion, seek profesional assistance or contact a Poison control Center immediately</paragraph>
+               </text>
+               <effectiveTime value="20260801"/>
+            </section>
+         </component>
+         <component>
+            <section ID="id_link_596a1b21-511e-097e-e063-6394a90a3c25">
+               <id root="596a1b21-511d-097e-e063-6394a90a3c25"/>
+               <code code="51727-6" codeSystem="2.16.840.1.113883.6.1" displayName="INACTIVE INGREDIENT SECTION"/>
+               <text>
+                  <paragraph>Lanolin, Light Mineral Oil, Paraffin, Vitamin A, Vitamin D, Vitamin E and Cl 12740</paragraph>
+               </text>
+               <effectiveTime value="20260801"/>
+            </section>
+         </component>
+         <component>
+            <section ID="id_link_596bd090-1cbc-652c-e063-6294a90aee9a">
+               <id root="596bd5a8-8361-68fb-e063-6294a90acb79"/>
+               <code code="34068-7" codeSystem="2.16.840.1.113883.6.1" displayName="DOSAGE &amp; ADMINISTRATION SECTION"/>
+               <text>
+                  <paragraph>Apply as needed </paragraph>
+               </text>
+               <effectiveTime value="20260801"/>
+            </section>
+         </component>
+         <component>
+            <section ID="id_link_596bd452-fb24-7fab-e063-6394a90a4663">
+               <id root="596be6bc-90b1-7c16-e063-6294a90a240e"/>
+               <code code="34071-1" codeSystem="2.16.840.1.113883.6.1" displayName="WARNINGS SECTION"/>
+               <text>
+                  <paragraph> For external use only. When using this product do not get into eyes</paragraph>
+               </text>
+               <effectiveTime value="20260801"/>
+            </section>
+         </component>
+         <component>
+            <section ID="id_link_596be3fb-0dfa-8988-e063-6394a90ab589">
+               <id root="596be3fb-0df9-8988-e063-6394a90ab589"/>
+               <code code="34067-9" codeSystem="2.16.840.1.113883.6.1" displayName="INDICATIONS &amp; USAGE SECTION"/>
+               <text>
+                  <list listType="unordered">
+                     <item>Temporarily protects minor cuts, scrapes, burns. </item>
+                     <item>Temporarily protects and helps relieve chapped or cracked skin and lips </item>
+                     <item>Heps protect aganist the drying effects of wind and cold weather </item>
+                  </list>
+               </text>
+               <effectiveTime value="20260801"/>
+            </section>
+         </component>
+         <component>
+            <section ID="id_link_596a0107-888b-4cd7-e063-6294a90aef26">
+               <id root="596a4d69-b326-33fa-e063-6394a90a4ced"/>
+               <code code="51945-4" codeSystem="2.16.840.1.113883.6.1" displayName="PACKAGE LABEL.PRINCIPAL DISPLAY PANEL"/>
+               <text>
+                  <paragraph>
+                     <renderMultiMedia referencedObject="img_596a4ce1-7dd4-9c32-e063-6294a90a83d0"/>
+                  </paragraph>
+               </text>
+               <effectiveTime value="20260801"/>
+               <component>
+                  <observationMedia ID="img_596a4ce1-7dd4-9c32-e063-6294a90a83d0">
+                     <text>Test</text>
+                     <value mediaType="image/jpeg" xsi:type="ED">
+                        <reference value="ADE Ointment 5g.jpg"/>
+                     </value>
+                  </observationMedia>
+               </component>
+            </section>
+         </component>
+      </structuredBody>
+   </component>
+</document>

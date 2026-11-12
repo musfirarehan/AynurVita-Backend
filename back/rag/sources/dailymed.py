@@ -30,7 +30,7 @@ SESSION = requests.Session()
 SESSION.headers.update(
     {
         "User-Agent": (
-            "PharmaAssist-AI/1.0 "
+            "AYNUR-VITA/1.0 "
             "(educational research project)"
         ),
         "Accept": "*/*",
